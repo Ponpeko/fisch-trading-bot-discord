@@ -36,6 +36,27 @@ pip install -r requirements.txt
 DISCORD_TOKEN=your_discord_bot_token_here
 SHEET_URL=your_google_sheets_csv_url_here
 ```
+## Setup Virtual Environment
+
+1. Create virtual environment:
+```bash
+python -m venv venv
+```
+
+2. Activate virtual environment:
+- **Windows:**
+```bash
+venv\Scripts\activate
+```
+- **macOS/Linux:**
+```bash
+source venv/bin/activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
 ## Configuration
 
