@@ -167,14 +167,13 @@ async def trade(ctx, *, trade_info: str):
         # Summary
         embed.add_field(name="📊 Result", value=f"**{total_offered}** / **{target_value}** = **{percentage:.1f}%**", inline=False)
         embed.add_field(name="Status", value=status, inline=False)
-        embed.add_field(value="Note: Calculations only based on value", inline=False)
+        embed.add_field(name= "Note", value="Note: Calculations only based on value", inline=False)
         
         await ctx.send(embed=embed)
         
     except Exception as e:
         await ctx.send(f"❌ Error: {e}")
 
-# Tambahkan parsing demand + command highdemand dan help
 def parse_demand(s):
     """Parse demand format '7/10' -> returns float or None."""
     if s is None:
@@ -252,5 +251,6 @@ async def info_cmd(ctx):
     embed.add_field(name="f!highdemand [demand] [limit]", value="List item dengan demand ≥ <demand>.", inline=False)
     embed.add_field(name="f!info", value="Tampilkan pesan ini.", inline=False)
     await ctx.send(embed=embed)
+
 
 bot.run(TOKEN)
